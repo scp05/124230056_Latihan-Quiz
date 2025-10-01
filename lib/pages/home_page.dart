@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_kendaraan/data/vehicle_data.dart'; // Sesuaikan dengan nama tugas kamu
-import 'package:tugas_kendaraan/pages/detail_page.dart'; // Sesuaikan dengan namtugasct kamu
-import 'package:tugas_kendaraan/pages/login_page.dart'; // Sesuaikan dengan natugasect kamu
+import 'package:tugas_kendaraan/data/vehicle_data.dart'; 
+import 'package:tugas_kendaraan/pages/detail_page.dart'; 
+import 'package:tugas_kendaraan/pages/login_page.dart';
 
 class HomePage extends StatelessWidget {
   final String username;
@@ -17,7 +17,6 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () {
-              // Kembali ke halaman login
               Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => const LoginPage()),
@@ -58,7 +57,6 @@ class HomePage extends StatelessWidget {
                     title: Text(vehicle.name),
                     subtitle: Text(vehicle.type),
                     onTap: () {
-                      // Pindah ke DetailPage saat card diklik
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -75,4 +73,5 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
 }
