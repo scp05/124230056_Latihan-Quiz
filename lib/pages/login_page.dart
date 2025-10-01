@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_kendaraan/pages/home_page.dart'; // Sesuaikan dengan nama project kamu
+import 'package:tugas_kendaraan/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -58,15 +58,13 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  // Cek validasi form
                   if (_formKey.currentState!.validate()) {
-                    // Autentikasi sederhana
+                  
                     String username = _usernameController.text;
                     String password = _passwordController.text;
 
-                    // Ganti dengan logika autentikasi kamu sendiri
                     if (username == 'user' && password == 'password') {
-                      // Passing data username ke HomePage
+                   
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
@@ -101,4 +99,5 @@ class _LoginPageState extends State<LoginPage> {
     _passwordController.dispose();
     super.dispose();
   }
+
 }
